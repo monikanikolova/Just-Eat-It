@@ -73,8 +73,35 @@
   <br>
 
   <div>
-    <h1 class="suggestions">Suggestions</h1>
+    <h1 class="popular">What's Hot</h1>
   </div>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active item">
+          <img src="assets/images/chicken.jpg" class="d-block w-75" alt="...">
+        </div>
+        <div class="carousel-item item">
+          <img src="assets/images/kebobs.jpg" class="d-block w-75" alt="...">
+        </div>
+        <div class="carousel-item item">
+          <img src="assets/images/bread.jpg" class="d-block w-75" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
   
   <!-- <div class="container-fluid" id="popular-items">
     <div class="card-deck">
@@ -86,7 +113,7 @@
   <div class="container-fluid" id="popular-items">
     <div class="card-deck">
       <div class="card shadow p-3 mb-5 bg-white rounded">
-        <div data-aos="zoom-in">
+        <div data-aos="zoom-in-up">
 
           <img src="assets/images/kebobs.jpg" class="card-img-top" alt="Kebobs">
           <div class="card-body">
@@ -100,7 +127,7 @@
 
         <!-- <div data-aos="flip-left"> -->
 
-        <div data-aos="zoom-in">
+        <div data-aos="zoom-in-up">
 
           <img src="assets/images/bread.jpg" class="card-img-top" alt="Bread image">
           <div class="card-body">
@@ -114,7 +141,7 @@
         
         <!-- <div data-aos="flip-left"> -->
 
-        <div data-aos="zoom-in">
+        <div data-aos="zoom-in-up">
 
           <img src="assets/images/chicken.jpg" class="card-img-top" alt="Chicken">
           <div class="card-body">
@@ -127,10 +154,9 @@
     </div>
   </div>
 
-
-  <footer>
+  <div class="footer">
     <p>Just Eat It</p>
-  </footer>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -143,6 +169,7 @@
   <script src="assets/javascript/ajax.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
     crossorigin="anonymous"></script>
+
 </body>
 
 </html>
