@@ -107,4 +107,5 @@ body, html {
 
 .suggestions {
     text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
 }
