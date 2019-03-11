@@ -126,3 +126,19 @@ body, html {
     color: black;
     text-align: center;
   }
+
+  #ingredients-list {
+      list-style-type: none;
+  }
+
+  .container {
+      margin: 50px auto;
+  }
+
+  #recipe-btn {
+      margin-left: 400px;
+  }
+
+  #restaurant-btn {
+      margin-right: 300px;
+  }
