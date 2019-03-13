@@ -105,6 +105,40 @@ body, html {
     font-size: 20px;
 }
 
-.suggestions {
+.popular {
     text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    margin: 40px;
 }
+
+.carousel-inner > .item > img {
+    width: 100%;
+    height:400px;
+    margin: 0 auto;
+   }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e9e9e9;
+    color: black;
+    text-align: center;
+  }
+
+  #ingredients-list {
+      list-style-type: none;
+  }
+
+  .container {
+      margin: 50px auto;
+  }
+
+  #recipe-btn {
+      margin-left: 400px;
+  }
+
+  #restaurant-btn {
+      margin-right: 300px;
+  }
