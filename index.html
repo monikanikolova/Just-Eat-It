@@ -45,7 +45,7 @@
   </nav>
 
   <!--<div class="container">-->
-  <div class="hero-image">
+  <div class="hero-image hide">
     <div class="hero-text">
 
         <section class="rw-wrapper">
@@ -77,7 +77,7 @@
     <h1 class="popular">What's Hot</h1>
   </div>
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide hide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -111,7 +111,7 @@
       <div class="card shadow p-3 mb-5 bg-white rounded">
         <div data-aos="flip-left"> -->
 
-  <div class="container-fluid" id="popular-items">
+  <div class="container-fluid hide" id="popular-items">
     <div class="card-deck">
       <div class="card shadow p-3 mb-5 bg-white rounded">
         <div data-aos="zoom-in-up">
@@ -158,6 +158,10 @@
   <div class="card-columns" id="card-container">
 
   </div>
+
+    <!--The div element for the map -->
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="map"></div>
   
 
   <div class="footer">
@@ -165,14 +169,14 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDatBNVEMgizJTxvLD0X35kNigZsRMOg_E&libraries=places"
+    async defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/javascript/app.js"></script>
   <script src="assets/javascript/ajax.js"></script>
-
+  <script src="assets/javascript/config.js"></script>
 </body>
 
 </html>

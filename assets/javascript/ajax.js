@@ -1,3 +1,6 @@
+$(document).ready(function() {
+
+  AOS.init();
 // This .on("click") function will trigger the AJAX Call
 $("#find-recipe").on("click", function (event) {
 
@@ -5,6 +8,7 @@ $("#find-recipe").on("click", function (event) {
   // Here, it prevents the submit button from trying to submit a form when clicked
   event.preventDefault();
 
+  $('.hide').hide();
   // Here we grab the text from the input box
   var recipe = $("#recipe-input").val();
 
@@ -67,11 +71,13 @@ $("#find-recipe").on("click", function (event) {
 
         console.log("+++++++++++++++++++++++++++++");
 
+
         var newCard = `<div class='card shadow p-3 mb-5 bg-white rounded' style='width:18rem'>
           <div class='card-body' width='270px'>
             <img src=${recipeImageUrl} class='card-img-top' alt=${recipe} width='25%' height='auto'>
               <h5 class='card-title'>${recipe}</h5>
               <a class='btn btn-outline-success' href=${recipeUrl} role='button'>See More</a>
+              <a class="btn btn-outline-success" href="#" role="button">Link</a>
               <p class='card-text'><small class='text-muted'>Servings: ${servings}</small></p>
               <p class='card-text'><small class='text-muted'>Calorie: ${Math.floor(calories)}</small></p>
           </div>
@@ -80,4 +86,5 @@ $("#find-recipe").on("click", function (event) {
         $('#card-container').append(newCard);
       }
     }) 
+  })
 });
