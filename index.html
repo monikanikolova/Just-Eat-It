@@ -14,7 +14,6 @@
   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   <title>Just Eat It</title>
 </head>
-
 <body>
   <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="index.html" id="navbar-text">Just Eat It</a>
@@ -36,47 +35,42 @@
         </a>
       </li>
       <li>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="assets/images/food.png" width="30" height="30" class="d-inline-block align-top" alt="">
         </a>
       </li>
     </ul>
   </nav>
-
-  <!--<div class="container">-->
-  <div class="hero-image">
-    <div class="hero-text">
-
+  <div class="wrapper"></div>
+    <div class="hero-image hide">
+      <div class="hero-text">
         <section class="rw-wrapper">
-            <h2 class="rw-sentence">
-              <div class="rw-words">
-                <span>GRILL</span>
-                <span>SPICE</span>
-                <span>MELT</span>
-                <span>BAKE</span>
-                <span>TASTE</span>
-              </div>
-            </h2>
-          </section>
-
-      <p id="search-p">Search Recipes</p>
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Recipe Name" aria-label="Recipe Name" aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button type="submit" class="btn btn-success" id="search-btn">Submit</button>
+          <h2 class="rw-sentence">
+            <div class="rw-words">
+              <span>GRILL</span>
+              <span>SPICE</span>
+              <span>MELT</span>
+              <span>BAKE</span>
+              <span>TASTE</span>
+            </div>
+          </h2>
+        </section>
+        <p id="search-p">Search Recipes</p>
+        <div class="input-group mb-3 hide">
+          <input type="text" class="form-control" id="recipe-input" placeholder="Recipe Name" aria-label="Recipe Name"
+            aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-success" id="find-recipe">Submit</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- </div> -->
-  <br>
-  <br>
-
-  <div>
-    <h1 class="popular">What's Hot</h1>
-  </div>
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <br>
+    <br>
+    <div>
+      <h1 class="popular hide">What's Hot</h1>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide hide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -102,73 +96,53 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  
-  <!-- <div class="container-fluid" id="popular-items">
-    <div class="card-deck">
-
-
-      <div class="card shadow p-3 mb-5 bg-white rounded">
-        <div data-aos="flip-left"> -->
-
-  <div class="container-fluid" id="popular-items">
-    <div class="card-deck">
-      <div class="card shadow p-3 mb-5 bg-white rounded">
-        <div data-aos="zoom-in-up">
-
-          <img src="assets/images/kebobs.jpg" class="card-img-top" alt="Kebobs">
-          <div class="card-body">
-            <h5 class="card-title">Kebobs</h5>
-            <button type="button" class="btn btn-outline-success">See more</button>
-            <p class="card-text"><small class="text-muted">Nutritional Info:</small></p>
+    <div class="container-fluid hide" id="popular-items">
+      <div class="card-deck">
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div data-aos="zoom-in-up">
+            <img src="assets/images/kebobs.jpg" class="card-img-top" alt="Kebobs">
+            <div class="card-body">
+              <h5 class="card-title">Kebobs</h5>
+              <button type="button" class="btn btn-outline-success">See more</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="card shadow p-3 mb-5 bg-white rounded">
-
-        <!-- <div data-aos="flip-left"> -->
-
-        <div data-aos="zoom-in-up">
-
-          <img src="assets/images/bread.jpg" class="card-img-top" alt="Bread image">
-          <div class="card-body">
-            <h5 class="card-title">Bread Recipe</h5>
-            <button type="button" class="btn btn-outline-success">See more</button>
-            <p class="card-text"><small class="text-muted">Nutritional Info:</small></p>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div data-aos="zoom-in-up">
+            <img src="assets/images/bread.jpg" class="card-img-top" alt="Bread image">
+            <div class="card-body">
+              <h5 class="card-title">Bread Recipe</h5>
+              <button type="button" class="btn btn-outline-success">See more</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="card shadow p-3 mb-5 bg-white rounded">
-        
-        <!-- <div data-aos="flip-left"> -->
-
-        <div data-aos="zoom-in-up">
-
-          <img src="assets/images/chicken.jpg" class="card-img-top" alt="Chicken">
-          <div class="card-body">
-            <h5 class="card-title">Chicken Recipe</h5>
-            <button type="button" class="btn btn-outline-success">See More</button>
-            <p class="card-text"><small class="text-muted">Nutritional Info:</small></p>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div data-aos="zoom-in-up">
+            <img src="assets/images/chicken.jpg" class="card-img-top" alt="Chicken">
+            <div class="card-body">
+              <h5 class="card-title">Chicken Recipe</h5>
+              <button type="button" class="btn btn-outline-success">See More</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+  <div class="card-container shadow p-3 m-3 bg-white rounded" id="recipe-view">
+  </div>
+  
   <div class="footer">
     <p>Just Eat It</p>
   </div>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/javascript/app.js"></script>
+   <script src="assets/javascript/app.js"></script>
   <script src="assets/javascript/ajax.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-    crossorigin="anonymous"></script>
+
 
 </body>
 
