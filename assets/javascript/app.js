@@ -4,10 +4,10 @@
 // This .on("click") function will trigger the AJAX Call
 
 $(document).ready (function(){
-    $(".hard").hide();
+    $(".result-title").hide();
 AOS.init();
 $("#find-recipe").on("click", function (event) {
-
+    
     event.preventDefault();
 
     $(".hide").hide();
@@ -19,9 +19,9 @@ $("#find-recipe").on("click", function (event) {
     // Here we grab the text from the input box
 
 
-
+   
     var recipeInput = $("#recipe-input").val();
-
+    
     var queryURL = "https://api.edamam.com/search?q=" + recipeInput + "&app_id="+config.appId+"&app_key="+config.myKey+"&from=0&to=12&";
 
     // Performing an AJAX request with the queryURL//
@@ -69,13 +69,13 @@ $("#find-recipe").on("click", function (event) {
                 var recipeUrl = response.hits[i].recipe.url;
                 
                 
-                $(".hard").show();
+                $(".result-tittle").show();
 
-                var newCard = `<div class="card shadow p-3 m-3 bg-white rounded" style="width:20rem">
+                var newCard = `<div class="card shadow p-3 m-3 bg-white rounded" style="width:21rem">
                   <div class="card-body" width="270px">
                   <img src=${recipeImageUrl} class="card-img-top shadow" alt=${recipe} width="25%" height="auto">
                     <h5 class="card-title">${recipe}</h5>
-                    <a class="btn btn-primary" href=${recipeUrl} role="button">See Full Recipe</a> 
+                    <a class="btn btn-success" href=${recipeUrl} role="button">See Full Recipe</a> 
                     <p class="card-text"><small class="text-muted">Servings: ${servings}</small></p>
                     <p class="card-text"><small class="text-muted">Calorie: ${calories}</small></p>
                   </div>
