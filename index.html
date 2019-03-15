@@ -36,15 +36,14 @@
         </a>
       </li>
       <li>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="assets/images/food.png" width="30" height="30" class="d-inline-block align-top" alt="">
         </a>
       </li>
     </ul>
   </nav>
-
-  <!--<div class="container">-->
-  <div class="hero-image">
+  <div class="wrapper"></div>
+  <div class="hero-image hide">
     <div class="hero-text">
 
         <section class="rw-wrapper">
@@ -60,117 +59,114 @@
           </section>
 
       <p id="search-p">Search Recipes</p>
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Recipe Name" aria-label="Recipe Name" aria-describedby="button-addon2">
+      <div class="input-group mb-3 hide">
+        <input type="text" class="form-control" id="recipe-input" placeholder="Recipe Name" aria-label="Recipe Name"
+          aria-describedby="button-addon2">
         <div class="input-group-append">
-          <button type="submit" class="btn btn-success" id="search-btn">Submit</button>
+          <button type="submit" class="btn btn-success" id="find-recipe">Submit</button>
         </div>
       </div>
     </div>
   </div>
-  <!-- </div> -->
   <br>
   <br>
-
   <div>
-    <h1 class="popular">What's Hot</h1>
+    <h1 class="popular hide">What's Hot</h1>
   </div>
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active item">
-          <img src="assets/images/chicken.jpg" class="d-block w-75" alt="...">
-        </div>
-        <div class="carousel-item item">
-          <img src="assets/images/kebobs.jpg" class="d-block w-75" alt="...">
-        </div>
-        <div class="carousel-item item">
-          <img src="assets/images/bread.jpg" class="d-block w-75" alt="...">
-        </div>
+  <div>
+    <h1 class="result-title">Dieting Is Hard</h1>
+  </div>
+  <div id="carouselExampleIndicators" class="carousel slide hide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active item">
+        <img src="assets/images/chicken.jpg" class="d-block w-75" alt="...">
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <div class="carousel-item item">
+        <img src="assets/images/kebobs.jpg" class="d-block w-75" alt="...">
+      </div>
+      <div class="carousel-item item">
+        <img src="assets/images/bread.jpg" class="d-block w-75" alt="...">
+      </div>
     </div>
-  
-  <!-- <div class="container-fluid" id="popular-items">
-    <div class="card-deck">
-
-
-      <div class="card shadow p-3 mb-5 bg-white rounded">
-        <div data-aos="flip-left"> -->
-
-  <div class="container-fluid" id="popular-items">
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div class="container-fluid hide" id="popular-items">
     <div class="card-deck">
       <div class="card shadow p-3 mb-5 bg-white rounded">
         <div data-aos="zoom-in-up">
-
-          <img src="assets/images/kebobs.jpg" class="card-img-top" alt="Kebobs">
+          <img src="assets/images/tacos.jpg" class="card-img-top" alt="Tacos">
           <div class="card-body">
-            <h5 class="card-title">Kebobs</h5>
-            <button type="button" class="btn btn-outline-success" id="kebobs">See more</button>
-            <p class="card-text"><small class="text-muted">Nutritional Info:</small></p>
-          </div>
-        </div>
-      </div>
-      <div class="card shadow p-3 mb-5 bg-white rounded">
-
-        <!-- <div data-aos="flip-left"> -->
-
-        <div data-aos="zoom-in-up">
-
-          <img src="assets/images/bread.jpg" class="card-img-top" alt="Bread image">
-          <div class="card-body">
-            <h5 class="card-title">Bread Recipe</h5>
+            <h5 class="card-title">Tacos</h5>
             <button type="button" class="btn btn-outline-success">See more</button>
-            <p class="card-text"><small class="text-muted">Nutritional Info:</small></p>
           </div>
         </div>
       </div>
       <div class="card shadow p-3 mb-5 bg-white rounded">
-        
-        <!-- <div data-aos="flip-left"> -->
-
         <div data-aos="zoom-in-up">
-
-          <img src="assets/images/chicken.jpg" class="card-img-top" alt="Chicken">
+          <img src="assets/images/lasagna.jpg" class="card-img-top" alt="Lasagna">
           <div class="card-body">
-            <h5 class="card-title">Chicken Recipe</h5>
+            <h5 class="card-title">Lasagna</h5>
+            <button type="button" class="btn btn-outline-success">See more</button>
+          </div>
+        </div>
+      </div>
+      <div class="card shadow p-3 mb-5 bg-white rounded">
+        <div data-aos="zoom-in-up">
+          <img src="assets/images/salmon.jpg" class="card-img-top" alt="salmon">
+          <div class="card-body">
+            <h5 class="card-title">Grilled Salmon</h5>
             <button type="button" class="btn btn-outline-success">See More</button>
-            <p class="card-text"><small class="text-muted">Nutritional Info:</small></p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="footer">
-    <p>Just Eat It</p>
   </div>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <div class="card-container shadow p-3 m-3 bg-white rounded" id="recipe-view">
+  </div>
+  <div class="footer">
+    <p id="footer-text">Just Eat It</p>
+    <hr>
+    <div class="row">
+      <div class="col-lg-4">
+        <p>Copyright</p>
+        <p>About Us</p>
+        <p>News Room</p>
+      </div>
+      <div class="col-lg-4">
+          <p>Contact Us</p>
+          <p>Customer Support</p>
+          <p>Site Map</p>
+      </div>
+      <div class="col-lg-4">
+          <p>Privacy Policy</p>
+          <p>Data Policy</p>
+          <p>Terms of Service</p>
+        </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/javascript/app.js"></script>
   <script src="assets/javascript/ajax.js"></script>
-  <!-- local config file with API information -->
+  <script src="assets/javascript/app.js"></script>
   <script src="assets/javascript/config.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-    crossorigin="anonymous"></script>
+
 
 </body>
 
