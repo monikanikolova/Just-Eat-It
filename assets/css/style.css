@@ -37,67 +37,67 @@ body, html {
 .rw-wrapper{
     width: 80%;
     height: 100%;
-	position: relative;
-	margin: 55px auto 0 auto;
-	font-family: 'Bree Serif';
-	padding: 80px 0;
+    position: relative;
+    margin: 55px auto 0 auto;
+    font-family: 'Bree Serif';
+    padding: 80px 0;
 }
 .rw-sentence{
-	margin: 0;
-	text-align: left;
-	text-shadow: 2px 2px 2px black;
+    margin: 0;
+    text-align: left;
+    text-shadow: 2px 2px 2px black;
 }.rw-sentence span{
     height: 100%;
-	color: orange;
-	white-space: nowrap;
-	font-size: 200%;
-	font-weight: normal;
+    color: orange;
+    white-space: nowrap;
+    font-size: 200%;
+    font-weight: normal;
 }
 .rw-words{
-	display: inline;
-	text-indent: 10px;
+    display: inline;
+    text-indent: 10px;
 }
 .rw-words span{
-	position: absolute;
-	opacity: 0;
-	overflow: hidden;
-	width: 100%;
-	color: darkorange;
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    width: 100%;
+    color: darkorange;
 }
 .rw-words span{
-	animation: rotateWordsFirst 18s linear infinite 0s;
+    animation: rotateWordsFirst 18s linear infinite 0s;
 }
 .rw-words span:nth-child(2) { 
-	animation-delay: 3s; 
-	color: darkorange;
+    animation-delay: 3s; 
+    color: darkorange;
 }
 .rw-words span:nth-child(3) { 
-	animation-delay: 6s; 
-	color: darkorange;	
+    animation-delay: 6s; 
+    color: darkorange;  
 }
 .rw-words span:nth-child(4) { 
-	animation-delay: 9s; 
-	color: darkorange;
+    animation-delay: 9s; 
+    color: darkorange;
 }
 .rw-words span:nth-child(5) { 
-	animation-delay: 12s; 
-	color: darkorange;
+    animation-delay: 12s; 
+    color: darkorange;
 }
 .rw-words span:nth-child(6) {  
-	animation-delay: 15s; 
-	color: darkorange;
+    animation-delay: 15s; 
+    color: darkorange;
 }
 @keyframes rotateWordsFirst {
     0% { opacity: 1; animation-timing-function: ease-in; height: 0px; }
     8% { opacity: 1; height: 60px; }
     19% { opacity: 1; height: 60px; }
-	25% { opacity: 0; height: 60px; }
+    25% { opacity: 0; height: 60px; }
     100% { opacity: 0; }
 }
 @keyframes rotateWordsSecond {
     0% { opacity: 1; animation-timing-function: ease-in; width: 0px; }
     10% { opacity: 0.3; width: 0px; }
-	20% { opacity: 1; width: 100%; }
+    20% { opacity: 1; width: 100%; }
     27% { opacity: 0; width: 100%; }
     100% { opacity: 0; }
 }
@@ -105,10 +105,14 @@ body, html {
     font-size: 20px;
 }
 
-.popular {
+.popular,
+.result-title {
     text-transform: uppercase;
     font-family: 'Anton', sans-serif;
     margin: 40px;
+    text-align: center;
+    background: bisque;
+    padding: 10px;
 }
 
 .carousel-inner > .item > img {
@@ -121,9 +125,7 @@ body, html {
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+   
     width: 100%;
     background-color: #e9e9e9;
     color: black;
@@ -149,13 +151,15 @@ body, html {
         display: flex;
         flex-wrap: wrap;
   }
-  .popular, 
-  .result-title{
-      text-align: center;
-      background: bisque;
-      padding: 10px;
-  }
  .card-img-top{
      height:300px;
  }
+ #footer-text {
+     padding: 15px;
+     text-transform: uppercase;
+     font-family: 'Anton', sans-serif;
+
+ }
+  
+
   
