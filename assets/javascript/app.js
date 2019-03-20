@@ -18,7 +18,7 @@ $(document).ready(function () {
 
         var recipeInput = $("#recipe-input").val();
 
-        var queryURL = "https://api.edamam.com/search?q=" + recipeInput + "&app_id=12891585&app_key=e740541b89635a989cf795bf01193e13&from=0&to=12&";
+        var queryURL = "https://api.edamam.com/search?q=" + recipeInput + "&app_id="+myId+"&app_key="+myKey+"&from=0&to=12&";
 
         // Performing an AJAX request with the queryURL//
         $.ajax({
