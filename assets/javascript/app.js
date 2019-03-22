@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $(".result-title").hide();
     $("#recipe-view").hide();
@@ -9,9 +8,43 @@ $(document).ready(function () {
             event.preventDefault();
         }
     });
+
+    $.ajax({
+        url: "https://developers.zomato.com/api/v2.1/collections?city_id=303&count=3",
+        method: "GET",
+        headers: {
+            "user-key": "myKeyZom",
+            "accept": "application/json"
+        }
+    }).then(function (response) {
+        console.log(response);
+
+        for (var i = 0; i < response.collections.length; i++) {
+            console.log("Collections: " + response.collections[i].collection.description);
+
+            var cardTitle = response.collections[i].collection.title;
+            console.log("Title: " + cardTitle);
+
+            var cardImage = response.collections[i].collection.image_url;
+            console.log("Picture: " + cardImage);
+
+            var cardUrl = response.collections[i].collection.url;
+            console.log("Link: " + cardUrl);
+
+             var popularCard = `<div class="card shadow p-3 m-3 bg-white rounded" style="width:25rem">
+                    <div class="card-body" width="270px">
+                        <img src=${cardImage} class="card-img-top" alt=${cardTitle} width ="30%" height = "auto">
+                            <h5 class="card-title">${cardTitle}</h5>
+                            <a class="btn btn-outline-success" href=${cardUrl} role="button">See more</a>
+                            </div>
+                        </div>`
+            $("#collection-view").append(popularCard);
+        };
+    });
     // This .on("click") function will trigger the AJAX Call
     $("#find-recipe").on("click", function (event) {
         $(".result-title").show();
+        $("#collection-view").hide();
         // Here, it prevents the submit button from trying to submit a form when clicked
         event.preventDefault();
         $(".hide").hide();
@@ -19,7 +52,7 @@ $(document).ready(function () {
 
         var recipeInput = $("#recipe-input").val();
 
-        var queryURL = "https://api.edamam.com/search?q=" + recipeInput + "&app_id=12891585&app_key=e740541b89635a989cf795bf01193e13&from=0&to=12&";
+        var queryURL = "https://api.edamam.com/search?q=" + recipeInput + "&app_id=myId&app_key=myKeyEdam&from=0&to=12&";
 
         // Performing an AJAX request with the queryURL//
         $.ajax({
@@ -65,7 +98,6 @@ $(document).ready(function () {
                     console.log("Go to Recipe: " + response.hits[i].recipe.url);
                     var recipeUrl = response.hits[i].recipe.url;
 
-
                     $("#recipe-view").show();
 
                     var newCard = `<div class="card shadow p-3 m-3 bg-white rounded" style="width:21rem">
@@ -80,7 +112,5 @@ $(document).ready(function () {
                     $("#recipe-view").append(newCard);
                 };
             });
-
     });
-
 });
